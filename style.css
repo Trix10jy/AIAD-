@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0e0e10;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  background: #1a1a1d;
+  border: 1px solid #ff3c3c;
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #ff3c3c;
+}
+
+p {
+  color: #aaa;
+  margin-top: 0.3rem;
+}
+
+/* Search box */
+.search-box {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.8rem 2.5rem 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Table styles */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background: #2a2a2e;
+  color: #fff;
+  border-bottom: 2px solid #ff3c3c;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+th span {
+  font-size: 0.8rem;
+  margin-left: 5px;
+  color: #ff3c3c;
+}
+
+td {
+  background: #333;
+  border-bottom: 1px solid #444;
+  transition: background 0.3s;
+}
+
+td:hover {
+  background-color: #3a3a3d;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    background: #2a2a2e;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    border: none;
+    background: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #ff3c3c;
+  }
+}

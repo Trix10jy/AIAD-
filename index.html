@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cennik AIAD</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📋Cennik AIAD</h1>
+      <p>ADMINISTRATIVE INTERNAL AFFAIRS DIVISION</p>
+    </header>
+
+    <!-- Pole wyszukiwania -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Szukaj czynności..." onkeyup="filterTable()" />
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="white" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16a6.471 6.471 0 0 0 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+      </svg>
+    </div>
+
+    <!-- Tabela z premiami -->
+    <div class="table-wrapper">
+      <table id="premieTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)">Czynność <span id="name-arrow">▼</span></th>
+            <th onclick="sortTable(1)">Premia <span id="price-arrow">▼</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Czynność">Kontrola napadu na bank/biznes</td><td data-label="Premia">5000</td></tr>
+          <tr><td data-label="Czynność">Kontrola czynności na celach/statusów</td><td data-label="Premia">2500</td></tr>
+          <tr><td data-label="Czynność">Wystawiona kara (status/badania)</td><td data-label="Premia">4000</td></tr>
+          <tr><td data-label="Czynność">Wystawiona kara (opaska GPS)</td><td data-label="Premia">10000</td></tr>
+          <tr><td data-label="Czynność">Wpis dotyczący dispatchy</td><td data-label="Premia">3500</td></tr>
+          <tr><td data-label="Czynność">Wystawiona kara (reszta)</td><td data-label="Premia">7000</td></tr>
+          <tr><td data-label="Czynność">Rutynowa kontrola FP</td><td data-label="Premia">7500</td></tr>
+          <tr><td data-label="Czynność">Kontrola EMS/WN</td><td data-label="Premia">2000</td></tr>
+          <tr><td data-label="Czynność">Udział Event / Nalot</td><td data-label="Premia">15000</td></tr>
+          <tr><td data-label="Czynność">Reakcja na Cayo / FZ</td><td data-label="Premia">10000</td></tr>
+          <tr><td data-label="Czynność">Kontrola poprawności wypisania opaski GPS</td><td data-label="Premia">1000</td></tr>
+          <tr><td data-label="Czynność">Kontrola bagażnika aut / ewidencji mag</td><td data-label="Premia">1000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <p>AIAD - ADMINISTRATIVE INTERNAL AFFAIRS DIVISION</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
